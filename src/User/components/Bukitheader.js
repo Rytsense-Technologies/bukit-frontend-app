@@ -33,6 +33,23 @@ import Kochi from '../images/header/kochi.png'
 import Mumbai from '../images/header/mumbai.png'
 import indiaflag from '../images/header/india flag.png'
 import australiaflag from '../images/header/australia flag.png'
+import singapore from '../images/header/singapore flag.png'
+import london from '../images/header/london flag.png'
+import google from '../images/header/google.png'
+import facebook from '../images/header/facebook.png'
+import apple from '../images/header/apple.png'
+
+import bukit from '../images/Revised logo/4x/Asset 27@4x.png'
+
+import chennai from '../images/header/chennai.png'
+import coimbatore from '../images/header/coimbatore.png'
+import madurai from '../images/header/madurai.jpg'
+import trichy from '../images/header/trichy.png'
+import mumbai from '../images/header/mumbai.jpg'
+import kanyakumari from '../images/header/kanyakumari.jpg'
+import mysore from '../images/header/mysore.jpg'
+import bengaluru from '../images/header/bengaluru.png'
+
 
 
 
@@ -50,6 +67,7 @@ export default function Bukitheader() {
   const location = useLocation();
   
     const [showModal, setShowModal] = useState(false);
+    const [signinModal, setSigninModal] = useState(false);
     const [showhamburger, setshowhamburger] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [ViewAll, setViewAll] = useState(false);
@@ -64,6 +82,7 @@ export default function Bukitheader() {
           setLabelText(name); 
         };
         const closeModal = () => setShowModal(false);
+        const closeSigninModal = () => setSigninModal(false);
         const closehamburger = () => setshowhamburger(false);
         const openViewAll = () => setViewAll(!ViewAll);
 
@@ -73,14 +92,14 @@ export default function Bukitheader() {
 
 
   return (
-    <div className='headermain'>
+    <div className='headermain '>
      
         <div className='header '>
-                    <div className='header-left mt-[25px]   ml-[30px] '>
-                    <div>
-                    <p className='bulkitlogo'><Link to='/' >Bukit Logo</Link></p></div>
-                    <div className="flex items-center ">
-                    <input className='searchbox pl-[55px] relative' type='text' placeholder='Search for Events, Plays, Sports and Activities'></input>
+                    <div className='header-left mt-[20px]   ml-[30px] '>
+                    <div className='mt-[-40px] '>
+                    <p className='bulkitlogo'><Link to='/' ><img className='h-[60px] w-[60px]' src={bukit} alt=''></img> </Link></p></div>
+                    <div className=" flex items-center ">
+                    <input className='searchbox pl-[45px] relative' type='text' placeholder='Search for Events'></input>
                     <FontAwesomeIcon icon={faSearch} className="absolute text-gray-500  h-[13px] p-[18px] " />
                     </div></div>
                     <div className='header-right gap-6 mt-[25px] mr-[40px] '>
@@ -90,7 +109,7 @@ export default function Bukitheader() {
                       {/* <Events labelText={labelText} handleClick={handleClick} /> */}
                     
                     </div>
-                        <div className=''>
+                        <div className='' onClick={() => setSigninModal(true)}>
                         <button className='signinbutton rounded-lg'>Sign in</button></div>
                         <div className={` container ${isOpen ? 'change' : ''}`} onClick={toggleMenu} >
                             <div className="bar1 bg-white  p-[1.5px]"></div>
@@ -136,6 +155,14 @@ export default function Bukitheader() {
     <div>
       <img className='h-[50px] w-[50px]' src={australiaflag} alt=''></img>
       <p>Australia</p>
+    </div>
+    <div>
+      <img className='h-[50px] w-[50px]' src={singapore} alt=''></img>
+      <p>Singapore</p>
+    </div>
+    <div>
+      <img className='h-[50px] w-[50px]' src={london} alt=''></img>
+      <p>London</p>
     </div>
    </div>
 
@@ -188,31 +215,31 @@ export default function Bukitheader() {
        <p className='font-normal text-center text-[rgba(26,51,101,1)] text-[18px] leading-[23.44px]'>Popular Cities </p>
        </div>
        <div className="flex items-center justify-center flex-wrap w-[800px]  gap-y-2" onClick={closeModal}>
-<div className="w-1/4  text-normal text-center text-[rgba(26,51,101,1)]" onClick={() =>{ handleClick("Chennai"); setStateText("Chennai");setCountryid(101);setCountryText("India")}}>
-  <div><img className='w-[50px] ml-[60px] h-[50px]' src={india} alt=''></img></div>
+<div className="w-1/4  text-normal text-center text-[rgba(26,51,101,1)] shadow-none" onClick={() =>{ handleClick("Chennai"); setStateText("Chennai");setCountryid(101);setCountryText("India")}}>
+  <div><img className='w-[80px] ml-[60px] h-[80px] shadow-none' src={chennai} alt=''></img></div>
   <div><p>Chennai</p></div>
   </div>
-<div className="w-1/4  text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Delhi");setStateText("Delhi");setCountryid(101);setCountryText("India")}}>
-<div><img className='w-[50px] ml-[60px] h-[50px]' src={delhi} alt=''></img></div>
-<div>Delhi-NCR</div>
+<div className="w-1/4  text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Coimbatore");setStateText("Coimbatore");setCountryid(101);setCountryText("India")}}>
+<div><img className='w-[50px] ml-[60px] h-[50px]' src={coimbatore} alt=''></img></div>
+<div>Coimbatore</div>
 </div>
-<div className="w-1/4 text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Kolkata");setStateText("Kolkata");setCountryid(101);setCountryText("India")}}>
-<div><img className='w-[50px] ml-[60px] h-[50px]' src={Kolkata} alt=''></img></div>
-<div><p> Kolkata</p></div></div>
-<div className="w-1/4   text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Chandigarh");setStateText("Chandigarh");setCountryid(101);setCountryText("India")}}>
-<div><img className='w-[50px] ml-[60px] h-[50px]' src={Chandigarh} alt=''></img></div>
- <div> <p>Chandigarh</p></div></div>
+<div className="w-1/4 text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Madurai");setStateText("Madurai");setCountryid(101);setCountryText("India")}}>
+<div><img className='w-[50px] ml-[60px] h-[50px]' src={madurai} alt=''></img></div>
+<div><p> Madurai</p></div></div>
+<div className="w-1/4   text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Trichy");setStateText("Trichy");setCountryid(101);setCountryText("India")}}>
+<div><img className='w-[50px] ml-[60px] h-[50px]' src={trichy} alt=''></img></div>
+ <div> <p>Trichy</p></div></div>
 <div className="w-1/4  text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Mumbai");setStateText("Mumbai");setCountryid(101);setCountryText("India")}}>
-<div><img className='w-[50px] ml-[60px] h-[50px]' src={Mumbai} alt=''></img></div>
+<div><img className='w-[50px] ml-[60px] h-[50px]' src={mumbai} alt=''></img></div>
 <div><p>Mumbai</p></div></div>
-<div className="w-1/4  text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Hyderabad");setStateText("Hyderabad");setCountryid(101);setCountryText("India")}}>
-<div><img className='w-[50px] ml-[60px] h-[50px]' src={Hyderabad} alt=''></img></div>
-<div><p>Hyderabad</p></div></div>
-<div className="w-1/4   text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Kochi");setStateText("Kochi");setCountryid(101);setCountryText("India")}}>
-<div><img className='w-[50px] ml-[60px] h-[50px]' src={Kochi} alt=''></img></div>
-<div><p>  Kochi</p></div></div>
+<div className="w-1/4  text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Kanyakumari");setStateText("Kanyakumari");setCountryid(101);setCountryText("India")}}>
+<div><img className='w-[50px] ml-[60px] h-[50px]' src={kanyakumari} alt=''></img></div>
+<div><p>Kanyakumari</p></div></div>
+<div className="w-1/4   text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Mysuru");setStateText("Mysuru");setCountryid(101);setCountryText("India")}}>
+<div><img className='w-[50px] ml-[60px] h-[50px]' src={mysore} alt=''></img></div>
+<div><p>  Mysuru</p></div></div>
 <div className="w-1/4 text-normal  text-center text-[rgba(26,51,101,1)]" onClick={() => {handleClick("Bengaluru");setStateText("Bengaluru");setCountryid(101);setCountryText("India")}}>
-<div><img className='w-[50px] ml-[60px] h-[50px]' src={bangalore} alt=''></img></div>
+<div><img className='w-[50px] ml-[60px] h-[50px]' src={bengaluru} alt=''></img></div>
  <div><p> Bengaluru</p></div></div>
 
 </div>
@@ -243,6 +270,44 @@ export default function Bukitheader() {
    </div>
  </div>
 )}
+
+
+{signinModal && 
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 shadow-none " >
+   <div className="bg-white rounded-md shadow-lg w-[400px]  text-black max-h-[90vh] overflow-y-auto overflow-x-hidden"  >
+   <div>
+<div className='flex justify-end text-black h-[5px]'onClick={closeSigninModal}><FontAwesomeIcon icon={faWindowClose} /></div>
+
+<div className='flex space-x-3 justify-center items-center mt-[50px]'>
+<img className='h-[30px] w-[30px] shadow-none' src={indiaflag} alt=''></img>
+<p>+91</p>
+  <input type='text' className='border-[rgba(0,0,0,0.2)] border-b w-[250px]' placeholder='Enter your mobile number'></input>
+</div>
+
+<div className='justify-center flex items-center mt-[50px]'>
+  <p className='w-[330px] h-[40px] bg-[rgba(174,1,174,0.3)] border border-[rgba(0,0,0,0.4)] flex justify-center items-center rounded-lg'>Verify</p>
+</div>
+
+<div className='justify-center flex items-center mt-[50px]'>
+  <p className='w-[300px]  flex justify-center items-center'>Or connect with</p>
+</div>
+
+<div className='justify-center flex items-center mt-[20px] space-x-2 '>
+  <img className='w-[50px] h-[50px] border rounded-3xl shadow-none p-2' src={google} alt=''></img>
+  <img className='w-[50px] h-[50px] border rounded-3xl shadow-none p-2' src={facebook} alt=''></img>
+  <img className='w-[50px] h-[50px] border rounded-3xl shadow-none p-2'  src={apple} alt=''></img>
+</div>
+
+<div className='flex mt-[30px]'>
+  <input type='checkbox'></input>
+  <p className='pl-[15px] '>I agree to the<span className='text-red-500 font-medium text-[16px]'>Terms & Conditions </span> And <span className='text-red-500 font-medium text-[16px]'> Privacy Policy</span></p>
+</div>
+</div>
+</div>
+
+</div>
+
+}
 
 {/* icon color-color="rgba(26, 51, 101, 1) " */}
 

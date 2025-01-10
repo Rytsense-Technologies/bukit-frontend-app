@@ -1,7 +1,7 @@
 
 
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import { register } from 'swiper/element/bundle';
 
 
@@ -9,7 +9,7 @@ import Bukitheader from '../Bukitheader';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
-import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -51,7 +51,7 @@ const EventDetail = ({ events }) => {
       <div className="">
       
       
-      <div className="">
+      <div className="mt-[-40px]">
         <img
           src={event.image}
           alt={event.title}
@@ -61,8 +61,8 @@ const EventDetail = ({ events }) => {
 
 
         {/* <div className="text-white bg-[rgba(174,1,174,0.6)] "> */}
-        <div className="text-white border border-[rgba(174,1,174,0.6)] ">
-        <div className="flex">
+        <div className="text-white w-[1095px] ml-[5px]  sticky top-0 z-10 bg-[rgba(174,1,174,0.8)]">
+        <div className="flex ">
         <div>
           <h2 className=" text-2xl font-bold ">{event.title}</h2>
           <div className="flex space-x-2">
@@ -73,7 +73,7 @@ const EventDetail = ({ events }) => {
 
           </div>
           <div className=" ml-auto" >
-            <p className="bg-[rgba(255,67,67,1)] w-[150px] h-[50px] flex justify-center items-center rounded-lg ">Book</p>
+          <Link to={`/booking/${event.id}`}> <p className="bg-[rgba(255,67,67,1)] w-[150px] h-[50px] flex justify-center items-center rounded-lg ">Book Now</p></Link>
           </div>
           </div>
           <div className="flex ">
@@ -113,18 +113,16 @@ const EventDetail = ({ events }) => {
 
         <div className="w-2/3 ">
         <div className="border border-[rgba(174,1,174,0.6)] ">
-        <div>
-          <p className="text-lg font-semibold">Click on interested to stay updated about this event</p>
-        </div>
+        
        
         <div className="flex">
         <div>
         <div className="flex">
-          <span className="  "> <FontAwesomeIcon icon={faThumbsUp} className="text-green-300" /> </span>
-          <p>65432</p>
+          <span className="  "> <FontAwesomeIcon icon={faHeart} className="text-green-300" /> </span>
+          <p>124 are interested</p>
           </div>
           <div className="flex space-x-2">
-          <p className="font- text-[13px]">People have shown interest recently</p> 
+          <p className="font- text-[13px]">Make Interested to know more about this event</p> 
           
           </div>
 
@@ -196,7 +194,11 @@ const EventDetail = ({ events }) => {
         </div>
 
         <div className="w-1/3 ">
-
+        <div className="border border-[rgba(174,1,174,0.6)] ">
+        <div>
+          <p className="text-lg font-semibold">Mumbai</p>
+        </div>
+        </div>
         </div>
 
       </div>

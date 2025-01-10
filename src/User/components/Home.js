@@ -47,7 +47,7 @@ export default function Home() {
 
       
       <div >
-      <main className='container2 img-slide mt-[-10px]'>
+      <main className='container2 img-slide mt-[-50px]'>
     <swiper-container space-between="10" slides-per-view="1" pagination="true" navigation="true" >
       {slideimg.map((image,index)=>{
         return <swiper-slide key={index}><img  src={image} alt='' loading="lazy"></img></swiper-slide>

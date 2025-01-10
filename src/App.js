@@ -8,6 +8,7 @@ import Events from './User/components/Events';
 import Plays from './User/components/Plays';
 import Sports from './User/components/Sports';
 import Activities from './User/components/Activities';
+import Booking from './User/components/Booking';
 
 import { LabelProvider } from './User/components/LabelContext';
 import EventDetail from './User/components/DetailComponents/EventDetail';
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
   { path: '/sports', element: <Sports /> },
   { path: '/activities', element: <Activities /> },
   { path: '/event/:id', element: <EventDetail events={eventsData} /> },
+  { path: '/booking/:id', element: <Booking events={eventsData} /> },
+
   { path: '/events/list', element: <DashboardLayout><EventList /></DashboardLayout> },
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },

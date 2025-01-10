@@ -132,7 +132,7 @@ export default function Plays() {
        
 
         <div >
-      <main className='container2 img-slide mt-[-15px] '>
+      <main className='container2 img-slide mt-[-50px] '>
     <swiper-container className=" " space-between="10" slides-per-view="1" pagination="true" navigation="true" lazlazy="true"  >
       {slideimg.map((image,id)=>{
         return <swiper-slide className="" key={id}><img className="shadow-xl rounded-lg " src={image} alt='' loading="lazy"></img></swiper-slide>

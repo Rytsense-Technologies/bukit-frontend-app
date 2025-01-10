@@ -29,6 +29,7 @@
     "@react-spectrum/slider": "^3.7.0",
     "@react-spectrum/table": "^3.15.0",
     "@syncfusion/ej2-react-calendars": "^28.1.35",
+    "bootstrap-icons": "^1.11.3",
     "bulkit": "file:",
     "cra-template": "1.2.0",
     "date-fns": "^4.1.0",
