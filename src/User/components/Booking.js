@@ -163,8 +163,8 @@ export default function Booking(selectedCategory ) {
        <div className='ml-[40px] mt-[-60px] w-1/2'>
        <p className='flex justify-center items-center h-[40px] bg-[#444451]'>Choose Tickets</p>
 
-       <div className='flex flex-wrap justify-center space-x-6'>
-        <div className=''>
+       <div className='flex flex-wrap justify-around space-x-6'>
+        <div className='ml-[15px]'>
         <div className="relative inline-block" onClick={()=>setvipcolor(!vipcolor)} >
   <FontAwesomeIcon className={`h-[150px] ${vipcolor  ? "text-white" : "text-violet-500" }`}  icon={faTicketSimple} />
   <span className="absolute top-[50px] left-[60px] text-black  ">
@@ -386,6 +386,9 @@ export default function Booking(selectedCategory ) {
         </div>
       )}
        </div>
+
+
+       
 
        
 
